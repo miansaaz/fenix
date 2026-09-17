@@ -304,13 +304,76 @@ textarea {
 @media(min-width:700px){.fenix-navigation__inner{width:500px}}
 
 
-.fenix-navigation--training{padding-inline:0;background:#070708;border-top:1px solid #29292b}
-.fenix-navigation--training .fenix-navigation__inner{border:0;border-radius:0;background:transparent}
-.fenix-navigation--training button.active{box-shadow:none;background:linear-gradient(120deg,#280403,#190303)}
-.fenix-navigation--training button{min-height:62px}
-.fenix-navigation--training .fenix-navigation__icon{width:28px;height:28px}
 /* Canonical mobile navigation uses accent icon/label without a filled selection tile. */
 .fenix-navigation button.active{background:transparent;box-shadow:none}
 .fenix-navigation--nutrition button{min-height:40px;gap:2px}
 .fenix-navigation--nutrition .fenix-navigation__icon{width:20px;height:20px}
 .fenix-navigation--nutrition .fenix-navigation__label{font-size:9px}
+
+/*
+ * Responsive shell
+ *
+ * The approved layouts are phone-first, but the shell must still remain
+ * usable on narrow devices, landscape phones, and larger screens. These
+ * rules only adapt the shared frame; each domain continues to own the
+ * layout of its content.
+ */
+@media (max-width: 359px) {
+  body {
+    min-width: 0;
+  }
+
+  .fenix-placeholder-page__inner {
+    padding-inline: 12px;
+  }
+
+  .fenix-navigation {
+    padding-inline: 4px;
+  }
+
+  .fenix-navigation__inner {
+    border-radius: 18px;
+  }
+
+  .fenix-navigation button {
+    min-height: 52px;
+    gap: 3px;
+    font-size: 9px;
+  }
+
+  .fenix-navigation__icon {
+    width: 21px;
+    height: 21px;
+  }
+}
+
+@media (min-width: 700px) {
+  html {
+    background:
+      radial-gradient(circle at 50% 0, rgb(var(--fenix-accent-rgb) / 0.07), transparent 30rem),
+      var(--fenix-bg);
+  }
+
+  .fenix-navigation {
+    padding-inline: 16px;
+  }
+
+  .fenix-navigation__inner {
+    width: 520px;
+  }
+}
+
+@media (orientation: landscape) and (max-height: 540px) {
+  .fenix-navigation button {
+    min-height: 48px;
+  }
+
+  .fenix-navigation__icon {
+    width: 22px;
+    height: 22px;
+  }
+
+  .fenix-navigation--nutrition button {
+    min-height: 38px;
+  }
+}
