@@ -303,6 +303,7 @@ textarea {
 .fenix-app>.fenix-view>main,.fenix-app>.fenix-view>.nutrition-vnext-shell{width:min(100%,520px);margin:0 auto}
 @media(min-width:700px){.fenix-navigation__inner{width:500px}}
 
+
 /* Canonical mobile navigation uses accent icon/label without a filled selection tile. */
 .fenix-navigation button.active{background:transparent;box-shadow:none}
 .fenix-navigation--nutrition button{min-height:40px;gap:2px}

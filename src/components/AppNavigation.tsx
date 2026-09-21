@@ -40,9 +40,9 @@ export function useSheetNavigation(open: boolean, onClose: () => void) {
 
 function NavigationIcon({ section, trainingStyle }: { section: AppSection; trainingStyle: boolean }) {
   const paths: Record<AppSection,string> = {
-    today: trainingStyle ? 'M12 1v2m0 18v2M1 12h2m18 0h2M4 4l2 2m12 12 2 2M4 20l2-2M18 6l2-2M18 12a6 6 0 1 1-12 0 6 6 0 0 1 12 0' : 'M3.5 10.5 12 3l8.5 7.5M5.5 9.5V21h13V9.5M9.5 21v-6h5v6',
+    today: 'M3.5 10.5 12 3l8.5 7.5M5.5 9.5V21h13V9.5M9.5 21v-6h5v6',
     training:'M7 6v12m10-12v12M3 9v6m18-6v6M7 12h10',
-    nutrition: trainingStyle ? 'M2 12h20c0 7-5 9-10 9S2 19 2 12ZM8 8l2-3m3 2 2-3m2 5 2-3M7 2h.01M3 7h.01' : 'M7 3v7M4.5 3v5a2.5 2.5 0 0 0 5 0V3M7 10v11M16 3c2 1.5 3 4 3 7v11M16 3v9h3',
+    nutrition: 'M7 3v7M4.5 3v5a2.5 2.5 0 0 0 5 0V3M7 10v11M16 3c2 1.5 3 4 3 7v11M16 3v9h3',
     progress:'M5 20V12M12 20V4M19 20V8',
   }
   return <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={trainingStyle && (section === 'training' || section === 'progress') ? '3.7' : '1.8'} strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d={paths[section]} /></svg>
